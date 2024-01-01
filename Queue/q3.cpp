@@ -89,5 +89,8 @@ int main()
 {
     enqueuefront(1);
     dequeuefront();
-
+    enqueuerear(23);
+    enqueuerear(4);
+    dequeuerear();
+    return 0;
 }
