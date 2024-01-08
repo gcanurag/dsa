@@ -76,6 +76,15 @@ class LinkedList{
                 while(ptr->data!=sData){
                     ptr = ptr->next;
                 }
+                if (ptr == nullptr)
+                {
+                    cout << "The node with data" << sData << "is not found" << endl;
+                    return;
+                }
+                if (ptr->next == nullptr)
+                {
+                    cout << "The node with data " << sData << " is at the end of the list." << endl;
+                }
                 Node *temp = ptr->next;
                 ptr -> next = temp -> next;
                 delete temp;
@@ -91,13 +100,7 @@ class LinkedList{
             while(ptr->next->next->data!=sData){
                 ptr = ptr->next;
             }
-            if(ptr==nullptr){
-                cout << "The node with data" << sData << "is not found" << endl;
-                return;
-            }
-            if(ptr->next==nullptr){
-                cout << "The node with data " << sData << " is at the end of the list." << endl;
-            }
+           
             Node *temp = ptr->next;
             ptr->next = temp->next;
             delete temp;
