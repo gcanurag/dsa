@@ -28,11 +28,11 @@ public:
         const Node *ptr;
         ptr = head;
         while(ptr!=nullptr){
-            cout << ptr->data << "";
+            cout << ptr->data << " ";
             ptr = ptr->next;
         }
 
-        cout << endl;
+        cout << "\n";
     }
 };
 

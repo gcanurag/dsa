@@ -50,6 +50,22 @@ class LinkedList{
             
         }
 
+        void deleteFromEnd(){
+            if(start==nullptr){
+                cout << "The list is empty::underflow condition" << endl;
+                return;
+            }else{
+                Node *ptr = start;
+                //find the second last node
+                while(ptr->next->next!=nullptr){
+                    ptr = ptr->next;
+                }
+                Node *temp = ptr->next;
+                ptr->next = nullptr;
+                delete temp;
+            }
+        }
+
         void deleteAfterANode(int sData){
             if (start == nullptr)
             {
@@ -72,7 +88,7 @@ class LinkedList{
                 return;
             }
             Node *ptr = start;
-            while(ptr->next->data!=sData){
+            while(ptr->next->next->data!=sData){
                 ptr = ptr->next;
             }
             if(ptr==nullptr){
@@ -97,6 +113,7 @@ class LinkedList{
                     cout << ptr->data << " ";
                     ptr = ptr->next;
                 }
+                cout << '\n';
             }
 
         }
@@ -114,6 +131,8 @@ int main(){
     l.deleteAfterANode(3);
     l.printList();
     l.deleteBeforeANode(3);
+    l.printList();
+    l.deleteFromEnd();
     l.printList();
     return 0;
 }

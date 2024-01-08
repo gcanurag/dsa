@@ -43,6 +43,7 @@ public:
             cout << ptr->data << "";
             ptr = ptr->next;
         }
+        cout << '\n';
     }
 };
 
