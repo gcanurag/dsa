@@ -72,7 +72,7 @@ class LinkedList{
                 return;
             }
             Node *ptr = start;
-            while(ptr->next->data!=sData){
+            while(ptr->next->next->data!=sData){
                 ptr = ptr->next;
             }
             if(ptr==nullptr){
