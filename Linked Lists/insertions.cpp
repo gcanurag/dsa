@@ -26,7 +26,8 @@ public:
 
     void printList()const {
         const Node *ptr;
-        ptr = head;
+        // ptr = head->data;
+        cout << head->data;
         while(ptr!=nullptr){
             cout << ptr->data << " ";
             ptr = ptr->next;
